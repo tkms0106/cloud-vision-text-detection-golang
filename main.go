@@ -3,6 +3,7 @@ package main
 import (
 	"crypto/sha1"
 	"fmt"
+	"os"
 	"time"
 
 	"github.com/gin-gonic/contrib/static"
@@ -31,5 +32,9 @@ func main() {
 			time.Now().Format("20060102150405"), h[:4]))
 	})
 
-	r.Run(":5000")
+	port, ok := os.LookupEnv("PORT")
+	if !ok {
+		port = "5000"
+	}
+	r.Run(":" + port)
 }
