@@ -8,3 +8,5 @@ services:
       - "5000:5000"
     volumes:
       - ./:/go/src/github.com/tkms0106/cloud-vision-text-detection-golang/
+    env_file:
+      - docker-compose.env.dec
