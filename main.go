@@ -31,7 +31,10 @@ func main() {
 	if !ok {
 		port = "5000"
 	}
-	r.Run(":" + port)
+	err := r.Run(":" + port)
+	if err != nil {
+		panic(err)
+	}
 }
 
 func uploadHandler(c *gin.Context) {
@@ -56,7 +59,7 @@ func uploadHandler(c *gin.Context) {
 	os.Remove(filepath)
 }
 
-func detectDocumentText(filepath string) error {
+func detectDocumentText(filepath string) {
 	client, ctx := generateClient()
 	defer client.Close()
 
@@ -70,9 +73,11 @@ func detectDocumentText(filepath string) error {
 		log.Fatalf("Failed to create image: %v", err)
 	}
 	text, err := client.DetectDocumentText(ctx, image, nil)
+	if err != nil {
+		log.Fatalf("Failed to detect document text: %v", err)
+	}
 	log.Println(text.GetText())
 	os.Remove(filepath)
-	return nil
 }
 
 func generateClient() (*vision.ImageAnnotatorClient, context.Context) {
