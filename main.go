@@ -77,7 +77,6 @@ func detectDocumentText(filepath string) {
 		log.Fatalf("Failed to detect document text: %v", err)
 	}
 	log.Println(text.GetText())
-	os.Remove(filepath)
 }
 
 func generateClient() (*vision.ImageAnnotatorClient, context.Context) {
