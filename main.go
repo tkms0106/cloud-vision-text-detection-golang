@@ -9,6 +9,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/dustin/go-humanize"
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 	"github.com/mattn/go-colorable"
@@ -41,6 +42,12 @@ func main() {
 
 func uploadHandlerFunc(client *vision.ImageAnnotatorClient) gin.HandlerFunc {
 	return func(c *gin.Context) {
+		size, err := humanize.ParseBytes("10MB")
+		if err != nil {
+			log.Fatalf("%v", err)
+		}
+
+		imageupload.LimitFileSize(int64(size), c.Writer, c.Request)
 		img, err := imageupload.Process(c.Request, "file")
 		if err != nil {
 			panic(err)
