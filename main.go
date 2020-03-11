@@ -45,18 +45,13 @@ func uploadHandlerFunc(client *vision.ImageAnnotatorClient) gin.HandlerFunc {
 		if err != nil {
 			panic(err)
 		}
-		thumb, err := imageupload.ThumbnailPNG(img, 300, 300)
-		if err != nil {
-			panic(err)
-		}
 
-		h := sha1.Sum(thumb.Data)
-
+		h := sha1.Sum(img.Data)
 		filepath := fmt.Sprintf(
 			"%s_%x.png",
 			time.Now().Format("20060102150405"), h[:4],
 		)
-		err = thumb.Save(filepath)
+		err = img.Save(filepath)
 		if err != nil {
 			panic(err)
 		}
