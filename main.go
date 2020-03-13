@@ -89,7 +89,7 @@ func detectDocumentText(client *vision.ImageAnnotatorClient, filepath string) st
 		log.Fatalf("Failed to detect document text: %v", err)
 	}
 
-	log.Printf(text.GetText())
+	log.Printf("%v", text.GetText())
 	return text.GetText()
 }
 
