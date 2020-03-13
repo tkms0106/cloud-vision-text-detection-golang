@@ -63,7 +63,10 @@ func uploadHandlerFunc(client *vision.ImageAnnotatorClient) gin.HandlerFunc {
 			panic(err)
 		}
 
-		detectDocumentText(client, filepath)
+		text := detectDocumentText(client, filepath)
+		c.JSON(200, struct {
+			Text string `json:"text"`
+		}{text})
 		os.Remove(filepath)
 	}
 }
@@ -86,7 +89,7 @@ func detectDocumentText(client *vision.ImageAnnotatorClient, filepath string) st
 		log.Fatalf("Failed to detect document text: %v", err)
 	}
 
-	log.Println(text.GetText())
+	log.Printf(text.GetText())
 	return text.GetText()
 }
 
