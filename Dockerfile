@@ -3,6 +3,11 @@ RUN mkdir -p /go/src/github.com/tkms0106/
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:$PATH
 WORKDIR /go/src/github.com/tkms0106/cloud-vision-text-detection-golang
+RUN apk update \
+ && apk add --no-cache curl \
+ && curl -fLo /bin/air https://git.io/linux_air \
+ && chmod +x /bin/air \
+ && apk del curl
 COPY go.mod go.sum ./
 RUN go mod download
 
