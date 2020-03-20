@@ -2110,7 +2110,7 @@ function (_Emitter) {
 
       fileReader.readAsDataURL(file);
     } // `mockFile` needs to have these attributes:
-    // 
+    //
     //     { name: 'name', size: 12345, imageUrl: '' }
     //
     // `callback` will be invoked when the image has been downloaded and displayed.
@@ -2934,6 +2934,7 @@ function (_Emitter) {
         if (xhr.getResponseHeader("content-type") && ~xhr.getResponseHeader("content-type").indexOf("application/json")) {
           try {
             response = JSON.parse(response);
+            document.getElementById("data").innerHTML = response.text;
           } catch (error) {
             e = error;
             response = "Invalid JSON response from server.";
