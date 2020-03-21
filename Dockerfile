@@ -22,4 +22,5 @@ RUN addgroup -g 1000 -S tkms0106 \
 WORKDIR /home/tkms0106/app
 COPY ./assets ./assets
 COPY --from=builder /go/src/github.com/tkms0106/cloud-vision-text-detection-golang/main .
+USER tkms0106
 CMD ./main
