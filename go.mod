@@ -12,5 +12,4 @@ require (
 	github.com/olahol/go-imageupload v0.0.0-20160503070439-09d2b92fa05e
 	golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
 	google.golang.org/api v0.20.0
-	google.golang.org/genproto v0.0.0-20200306153348-d950eab6f860 // indirect
 )
