@@ -7,4 +7,8 @@
 
 Drop image here
 
-![ファイルをドロップ](https://user-images.githubusercontent.com/23391543/76159608-c00ead80-6165-11ea-9d94-641b297531bf.png)
+![dropzone](https://user-images.githubusercontent.com/23391543/76159608-c00ead80-6165-11ea-9d94-641b297531bf.png)
+
+# Dependency
+
+![dependency](./dependency.png)
