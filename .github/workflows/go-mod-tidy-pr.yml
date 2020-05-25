@@ -19,5 +19,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           git_user_name: GitHub Actions
           git_user_email: github-actions@example.cpm
-          base: develop
+          base: master
           labels: go-mod-tidy
