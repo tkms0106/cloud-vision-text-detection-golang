@@ -3,7 +3,7 @@ module github.com/tkms0106/cloud-vision-text-detection-golang
 go 1.14
 
 require (
-	cloud.google.com/go v0.61.0
+	cloud.google.com/go v0.62.0
 	github.com/dustin/go-humanize v1.0.0
 	github.com/gin-gonic/contrib v0.0.0-20191209060500-d6e26eeaa607
 	github.com/gin-gonic/gin v1.6.3
