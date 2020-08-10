@@ -2,7 +2,7 @@ name: go-mod-tidy-pr
 
 on:
   schedule:
-    - cron: "0 0 * * 7" # Every Saturday
+    - cron: "0 0 * * 6" # Every Saturday
 
 jobs:
   go-mod-tidy-pr:
