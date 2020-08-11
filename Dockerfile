@@ -5,7 +5,7 @@ ENV PATH $GOPATH/bin:$PATH
 WORKDIR /go/src/github.com/tkms0106/cloud-vision-text-detection-golang
 RUN apk update \
  && apk add --no-cache curl \
- && curl -fLo /bin/air https://raw.githubusercontent.com/cosmtrek/air/v1.12.1/bin/linux/air \
+ && curl -fLo /bin/air https://github.com/cosmtrek/air/releases/download/v1.12.3/air_1.12.3_linux_amd64 \
  && chmod +x /bin/air \
  && apk del curl
 COPY go.mod go.sum ./
