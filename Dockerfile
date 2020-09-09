@@ -1,4 +1,4 @@
-FROM golang:1.15.1 as dev
+FROM golang:1.15.2 as dev
 RUN mkdir -p /go/src/github.com/tkms0106/
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:$PATH
