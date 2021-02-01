@@ -10,6 +10,6 @@ require (
 	github.com/mattn/go-colorable v0.1.8
 	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646 // indirect
 	github.com/olahol/go-imageupload v0.0.0-20160503070439-09d2b92fa05e
-	golang.org/x/oauth2 v0.0.0-20201109201403-9fd604954f58
+	golang.org/x/oauth2 v0.0.0-20210201163806-010130855d6c
 	google.golang.org/api v0.36.0
 )
