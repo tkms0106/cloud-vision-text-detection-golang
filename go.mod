@@ -5,7 +5,7 @@ go 1.14
 require (
 	cloud.google.com/go v0.72.0
 	github.com/dustin/go-humanize v1.0.0
-	github.com/gin-gonic/contrib v0.0.0-20191209060500-d6e26eeaa607
+	github.com/gin-gonic/contrib v0.0.0-20201101042839-6a891bf89f19
 	github.com/gin-gonic/gin v1.6.3
 	github.com/mattn/go-colorable v0.1.8
 	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646 // indirect
