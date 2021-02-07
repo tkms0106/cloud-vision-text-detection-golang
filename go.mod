@@ -11,5 +11,5 @@ require (
 	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646 // indirect
 	github.com/olahol/go-imageupload v0.0.0-20160503070439-09d2b92fa05e
 	golang.org/x/oauth2 v0.0.0-20210113205817-d3ed898aa8a3
-	google.golang.org/api v0.38.0
+	google.golang.org/api v0.39.0
 )
